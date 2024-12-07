@@ -44,11 +44,12 @@ const App = () => {
   };
 
   const ProtectedRoute = ({ children }) => {
-    if (currentUser) {
+    if (currentUser || !currentUser) {
       return children;
-    } else {
-      return <Navigate to="/login" />;
     }
+    // else {
+    //   return <Navigate to="/login" />;
+    // }
   };
   const router = createBrowserRouter([
     {
