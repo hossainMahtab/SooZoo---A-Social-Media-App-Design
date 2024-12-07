@@ -43,20 +43,20 @@ const App = () => {
     );
   };
 
-  // const ProtectedRoute = ({ children }) => {
-  //   if (currentUser) {
-  //     return children;
-  //   } else {
-  //     return <Navigate to="/login" />;
-  //   }
-  // };
+  const ProtectedRoute = ({ children }) => {
+    if (currentUser) {
+      return children;
+    } else {
+      return <Navigate to="/" />;
+    }
+  };
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
-        // <ProtectedRoute>
-        <Layout />
-        // </ProtectedRoute>
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
       ),
       children: [
         {
