@@ -45,18 +45,18 @@ const App = () => {
 
   // const ProtectedRoute = ({ children }) => {
   //   if (currentUser) {
-  //     return children
+  //     return children;
   //   } else {
-  //     return <Navigate to='/login' />
+  //     return <Navigate to="/login" />;
   //   }
-  // }
+  // };
   const router = createBrowserRouter([
     {
       path: "/",
       element: (
-        //  <ProtectedRoute>
-        // </ProtectedRoute>,
+        // <ProtectedRoute>
         <Layout />
+        // </ProtectedRoute>
       ),
       children: [
         {
