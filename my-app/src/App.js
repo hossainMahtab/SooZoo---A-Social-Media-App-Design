@@ -47,7 +47,7 @@ const App = () => {
     if (currentUser) {
       return children;
     } else {
-      return <Navigate to="/" />;
+      return <Navigate to="/login" />;
     }
   };
   const router = createBrowserRouter([
